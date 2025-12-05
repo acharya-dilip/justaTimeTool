@@ -4,18 +4,27 @@
 struct windowMain {
     GtkWidget *windowMain;
     GtkWidget *gridParent;
+    GtkWidget *buttonStopWatch;
 }windowMain;
 static void activate(GtkApplication *app, gpointer user_data) {
 
     //Init of windowMain
     windowMain.windowMain = gtk_application_window_new(app);
-    gtk_window_set_default_size(GTK_WINDOW(windowMain.windowMain),400,400);
+    gtk_window_set_default_size(GTK_WINDOW(windowMain.windowMain),420,400);
     gtk_window_set_title(GTK_WINDOW(windowMain.windowMain),"JustaTimeTool");
     gtk_window_present(GTK_WINDOW(windowMain.windowMain));
 
     //Init of gridParent;
     windowMain.gridParent = gtk_grid_new();
     gtk_window_set_child(GTK_WINDOW(windowMain.windowMain),windowMain.gridParent);
+
+    //Init labelPlaceholder
+    GtkWidget *labelPlaceholder = gtk_label_new("");
+    gtk_grid_attach(GTK_GRID(windowMain.gridParent),labelPlaceholder,0,0,10,1);
+    gtk_widget_set_size_request(GTK_WIDGET(windowMain.windowMain),400,-1);
+
+
+
 
 
 }
