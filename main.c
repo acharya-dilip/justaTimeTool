@@ -44,6 +44,12 @@ static void activate(GtkApplication *app, gpointer user_data) {
     gtk_widget_set_size_request(windowMain.buttonWorldClock,160,120);
 
 
+    //Init of buttonPomodoro
+    windowMain.buttonPomodoro = gtk_button_new_with_label("🌐");
+    gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonPomodoro,0,1,1,1);
+    gtk_widget_set_size_request(windowMain.buttonPomodoro,160,120);
+
+
 }
 
 
