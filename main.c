@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
-
+struct windowMain {
+    GtkWidget *windowMain;
+    GtkWidget *gridParent;
+}windowMain;
 static void activate(GtkApplication *app, gpointer user_data) {
+
+
 
 }
 
