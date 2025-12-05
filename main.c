@@ -13,6 +13,11 @@ static void activate(GtkApplication *app, gpointer user_data) {
     gtk_window_set_title(GTK_WINDOW(windowMain.windowMain),"JustaTimeTool");
     gtk_window_present(GTK_WINDOW(windowMain.windowMain));
 
+    //Init of gridParent;
+    windowMain.gridParent = gtk_grid_new();
+    gtk_window_set_child(GTK_WINDOW(windowMain.windowMain),windowMain.gridParent);
+
+
 }
 
 
