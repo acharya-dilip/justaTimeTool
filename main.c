@@ -68,6 +68,7 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
 struct stopWatch {
     GtkWidget *windowMain;
+    GtkWidget *gridParent;
     GtkWidget *entryTimer;
     GtkWidget *buttonReset;
     GtkWidget *buttonStart;
@@ -81,6 +82,11 @@ void windowStopWatch() {
     gtk_window_set_title(GTK_WINDOW(stopWatch.windowMain),"StawpWatch");
     gtk_window_set_default_size(GTK_WINDOW(stopWatch.windowMain),400,400);
     gtk_window_present(GTK_WINDOW(stopWatch.windowMain));
+
+    //Init of gridParent
+    stopWatch.gridParent = gtk_grid_new();
+    gtk_window_set_child(GTK_WINDOW(stopWatch.windowMain),stopWatch.gridParent);
+
 
 }
 
