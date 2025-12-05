@@ -4,6 +4,10 @@
 
 
 
+void windowStopWatch();
+void windowWorldClock();
+void windowPomodoro();
+void windowTimer();
 
 
 struct windowMain {
@@ -62,7 +66,20 @@ static void activate(GtkApplication *app, gpointer user_data) {
 }
 
 
+void windowStopWatch() {
 
+}
+
+void windowWorldClock() {
+
+}
+
+void windowPomodoro() {
+
+}
+void windowTimer() {
+
+}
 
 
 
