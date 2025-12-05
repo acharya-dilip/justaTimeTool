@@ -35,9 +35,13 @@ static void activate(GtkApplication *app, gpointer user_data) {
 
     //Init of buttonStopWatch
     windowMain.buttonStopWatch = gtk_button_new_with_label("⏱️");
-    gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonStopWatch,0,0,10,1);
+    gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonStopWatch,0,0,1,1);
     gtk_widget_set_size_request(windowMain.buttonStopWatch,160,120);
 
+    //Init of buttonWorldClock
+    windowMain.buttonWorldClock = gtk_button_new_with_label("🌐");
+    gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonWorldClock,1,0,1,1);
+    gtk_widget_set_size_request(windowMain.buttonWorldClock,160,120);
 
 
 }
