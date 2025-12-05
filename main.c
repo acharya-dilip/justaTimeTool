@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
+
+
+
+
+
 struct windowMain {
     GtkWidget *windowMain;
     GtkWidget *gridParent;
@@ -49,8 +54,17 @@ static void activate(GtkApplication *app, gpointer user_data) {
     gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonPomodoro,0,1,1,1);
     gtk_widget_set_size_request(windowMain.buttonPomodoro,160,120);
 
+    //Init of buttonTimer
+    windowMain.buttonTimer = gtk_button_new_with_label("🌐");
+    gtk_grid_attach(GTK_GRID(windowMain.gridParent),windowMain.buttonTimer,1,1,1,1);
+    gtk_widget_set_size_request(windowMain.buttonTimer,160,120);
 
 }
+
+
+
+
+
 
 
 int main(int argc, char **argv) {
